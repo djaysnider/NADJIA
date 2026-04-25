@@ -119,7 +119,7 @@ Not AI. Not random. Something more… *annoyingly perceptive*.
 ## 🛠 Installation
 
 ```bash
-git clone https://github.com/yourname/nadjia.git
+git clone https://github.com/djaysnider/nadjia.git
 ```
 
 Then:
