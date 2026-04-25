@@ -92,6 +92,7 @@
             this.lblSystemStatus4 = new System.Windows.Forms.Label();
             this.lblSystemStatus3 = new System.Windows.Forms.Label();
             this.lblSystemStatus5 = new System.Windows.Forms.Label();
+            this.trackLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -247,7 +248,8 @@
             this.releasesToolStripMenuItem,
             this.tracksToolStripMenuItem,
             this.videosToolStripMenuItem,
-            this.photosToolStripMenuItem});
+            this.photosToolStripMenuItem,
+            this.trackLibraryToolStripMenuItem});
             this.databaseToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
             this.databaseToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
@@ -258,7 +260,7 @@
             this.artistsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.artistsToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.artistsToolStripMenuItem.Name = "artistsToolStripMenuItem";
-            this.artistsToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.artistsToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.artistsToolStripMenuItem.Text = "Artists";
             // 
             // musiciansToolStripMenuItem
@@ -266,7 +268,7 @@
             this.musiciansToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.musiciansToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.musiciansToolStripMenuItem.Name = "musiciansToolStripMenuItem";
-            this.musiciansToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.musiciansToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.musiciansToolStripMenuItem.Text = "Musicians";
             // 
             // releasesToolStripMenuItem
@@ -274,7 +276,7 @@
             this.releasesToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.releasesToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.releasesToolStripMenuItem.Name = "releasesToolStripMenuItem";
-            this.releasesToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.releasesToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.releasesToolStripMenuItem.Text = "Releases";
             // 
             // tracksToolStripMenuItem
@@ -282,7 +284,7 @@
             this.tracksToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.tracksToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.tracksToolStripMenuItem.Name = "tracksToolStripMenuItem";
-            this.tracksToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.tracksToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.tracksToolStripMenuItem.Text = "Tracks";
             // 
             // videosToolStripMenuItem
@@ -290,7 +292,7 @@
             this.videosToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.videosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.videosToolStripMenuItem.Name = "videosToolStripMenuItem";
-            this.videosToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.videosToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.videosToolStripMenuItem.Text = "Videos";
             // 
             // photosToolStripMenuItem
@@ -298,7 +300,7 @@
             this.photosToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.photosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.photosToolStripMenuItem.Name = "photosToolStripMenuItem";
-            this.photosToolStripMenuItem.Size = new System.Drawing.Size(186, 24);
+            this.photosToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.photosToolStripMenuItem.Text = "Photos";
             // 
             // launchToolStripMenuItem
@@ -730,6 +732,15 @@
             this.lblSystemStatus5.TabIndex = 27;
             this.lblSystemStatus5.Text = "... INITIALIZING ...";
             // 
+            // trackLibraryToolStripMenuItem
+            // 
+            this.trackLibraryToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.trackLibraryToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
+            this.trackLibraryToolStripMenuItem.Name = "trackLibraryToolStripMenuItem";
+            this.trackLibraryToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
+            this.trackLibraryToolStripMenuItem.Text = "Track Library";
+            this.trackLibraryToolStripMenuItem.Click += new System.EventHandler(this.trackLibraryToolStripMenuItem_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -850,6 +861,7 @@
         private System.Windows.Forms.Label lblSystemStatus4;
         private System.Windows.Forms.Label lblSystemStatus3;
         private System.Windows.Forms.Label lblSystemStatus5;
+        private System.Windows.Forms.ToolStripMenuItem trackLibraryToolStripMenuItem;
     }
 }
 

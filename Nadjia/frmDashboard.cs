@@ -50,38 +50,63 @@ namespace Nadjia
 
         public void GetForecast()
         {
-            // Contains the result of a retry request. 
-            DialogResult TryAgain = DialogResult.Yes;
-
-            // Keep trying to get the weather data until the user gives up or the call is successful. 
-            while (TryAgain == DialogResult.Yes)
-            {
-                try
-                {
-                    // Get the weather data. 
-                    GetData = XDocument.Load("http://api.openweathermap.org/data/2.5/weather?q=Indianapolis&mode=xml&appid=610879fc5d8d771a35e87a7f134a09ad");
-                    // MessageBox.Show("XML: " + GetData);
-                    // End the loop. 
-                    TryAgain = DialogResult.No;
-                }
-                catch (WebException WE)
-                {
-                    TryAgain = MessageBox.Show("Couldn't obtain the weather data!\r\nTry Again?", "Data Download Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-                }
-            }
-            // Obtain all the forecasts. 
-            double Kelvin = double.Parse(GetData.Element("current").Element("temperature").Attribute("value").Value);
-            double Farenheit = (Kelvin - 273.15) * 9 / 5 + 32;
-            string Forecast = "Temp: " + Convert.ToInt16(Farenheit).ToString() + "F ";
             try
             {
-                Forecast += "; Humidity: " + GetData.Root.Element("humidity").Attribute("value").Value + "%.\r\n";
-                Forecast += char.ToUpper(GetData.Root.Element("weather").Attribute("value").Value[0]) + GetData.Root.Element("weather").Attribute("value").Value.Substring(1) + ".\r\n";
-                Forecast += GetData.Root.Element("wind").Element("speed").Attribute("name").Value;
-                Forecast += " from the " + GetData.Element("current").Element("wind").Element("direction").Attribute("name").Value + ".\r\n";
+                GetData = XDocument.Load(
+                    "http://api.openweathermap.org/data/2.5/weather?q=Indianapolis&mode=xml&appid=610879fc5d8d771a35e87a7f134a09ad");
+
+                XElement current = GetData.Root;
+
+                if (current == null || current.Name != "current")
+                {
+                    lblWeather.Text = "WEATHER UNAVAILABLE";
+                    return;
+                }
+
+                XElement temperature = current.Element("temperature");
+                XElement humidity = current.Element("humidity");
+                XElement weather = current.Element("weather");
+                XElement wind = current.Element("wind");
+
+                if (temperature == null || temperature.Attribute("value") == null)
+                {
+                    lblWeather.Text = "WEATHER UNAVAILABLE";
+                    return;
+                }
+
+                double kelvin = double.Parse(temperature.Attribute("value").Value);
+                double fahrenheit = (kelvin - 273.15) * 9 / 5 + 32;
+
+                string forecast = "Temp: " + Convert.ToInt16(fahrenheit).ToString() + "F ";
+
+                if (humidity != null && humidity.Attribute("value") != null)
+                    forecast += "; Humidity: " + humidity.Attribute("value").Value + "%.\r\n";
+
+                if (weather != null && weather.Attribute("value") != null)
+                {
+                    string weatherText = weather.Attribute("value").Value;
+                    if (!string.IsNullOrEmpty(weatherText))
+                        forecast += char.ToUpper(weatherText[0]) + weatherText.Substring(1) + ".\r\n";
+                }
+
+                if (wind != null)
+                {
+                    XElement speed = wind.Element("speed");
+                    XElement direction = wind.Element("direction");
+
+                    if (speed != null && speed.Attribute("name") != null)
+                        forecast += speed.Attribute("name").Value;
+
+                    if (direction != null && direction.Attribute("name") != null)
+                        forecast += " from the " + direction.Attribute("name").Value + ".\r\n";
+                }
+
+                lblWeather.Text = forecast.ToUpper();
             }
-            catch (Exception e) { }
-            lblWeather.Text = Forecast.ToUpper();
+            catch
+            {
+                lblWeather.Text = "WEATHER UNAVAILABLE";
+            }
 
 
         }
@@ -181,6 +206,12 @@ namespace Nadjia
         private void rebuildDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmBuildLibrary();
+            frm.Show();
+        }
+
+        private void trackLibraryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmTrackSearch();
             frm.Show();
         }
     }

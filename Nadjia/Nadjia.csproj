@@ -63,15 +63,26 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTrackSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrackSearch.Designer.cs">
+      <DependentUpon>frmTrackSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="LibraryLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortableBindingList.cs" />
     <Compile Include="TrackInfo.cs" />
+    <Compile Include="TrackSearchService.cs" />
     <EmbeddedResource Include="frmBuildLibrary.resx">
       <DependentUpon>frmBuildLibrary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrackSearch.resx">
+      <DependentUpon>frmTrackSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

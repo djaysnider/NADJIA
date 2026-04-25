@@ -18,19 +18,50 @@ namespace Nadjia
 
         private void frmBuildLibrary_Load(object sender, EventArgs e)
         {
-            var trackCount = AppState.MusicLibrary.Count;
-            lblTracksLoaded.Text = trackCount + " tracks loaded from music library.";
-            lblLibraryPath.Text = "Current Library Path:" + nadiaConfig.trackLibraryFolder;
+            this.BackColor = System.Drawing.Color.FromArgb(18, 14, 28);
+            this.ClientSize = new System.Drawing.Size(620, 330);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+
+            StyleButton(btnRebuild);
+            StyleButton(btnChange);
+            StyleButton(btnClose);
+            lblLibraryPath.Text = nadiaConfig.trackLibraryFolder;
+
+            if (AppState.MusicLibrary != null)
+            {
+                lblTracksLoaded.Text = AppState.MusicLibrary.Count.ToString("N0") + " tracks currently loaded";
+            }
+            else
+            {
+                lblTracksLoaded.Text = "No library loaded";
+            }
         }
 
+        /* 
+        private void StyleButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderSize = 1;
+            button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(120, 90, 160);
+            button.BackColor = System.Drawing.Color.FromArgb(42, 32, 58);
+            button.ForeColor = System.Drawing.Color.White;
+            button.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+        }
+        */
         private void btnBuildLibrary_Click(object sender, EventArgs e)
         {
             string rootDirectory = @"D:\Music\Indianapolis";
             string outputXmlPath = @"C:\Users\djays\Documents\EMMA\library.xml";
 
+            
+
             btnRebuild.Enabled = false;
             progressBuildLibrary.Value = 0;
+            lblProgressPercent.Text = "0%";
             lblBuildStatus.Text = "Scanning MP3 files...";
+            lblCurrentFile.Text = "";
 
             BackgroundWorker worker = new BackgroundWorker();
             worker.WorkerReportsProgress = true;
@@ -56,14 +87,17 @@ namespace Nadjia
             worker.ProgressChanged += (s, args) =>
             {
                 progressBuildLibrary.Value = args.ProgressPercentage;
+                lblProgressPercent.Text = args.ProgressPercentage + "%";
 
                 ProgressInfo info = args.UserState as ProgressInfo;
 
                 if (info != null)
                 {
                     lblBuildStatus.Text =
-                        "Processing " + info.Current + " of " + info.Total +
-                        " - " + Path.GetFileName(info.FilePath);
+                        "Processing " + info.Current + " of " + info.Total;
+
+                    lblCurrentFile.Text =
+                        Path.GetFileName(info.FilePath);
                 }
             };
 
@@ -79,8 +113,14 @@ namespace Nadjia
                 else
                 {
                     progressBuildLibrary.Value = 100;
+                    lblProgressPercent.Text = "100%";
                     lblBuildStatus.Text = "Library build complete.";
-                    MessageBox.Show("Library XML created successfully.");
+                    lblCurrentFile.Text = outputXmlPath;
+
+                    AppState.MusicLibrary = LibraryLoader.LoadLibrary(outputXmlPath);
+                    lblTracksLoaded.Text = AppState.MusicLibrary.Count.ToString("N0") + " tracks currently loaded";
+
+//                    MessageBox.Show("Library XML created successfully.");
                 }
             };
 
@@ -102,6 +142,46 @@ namespace Nadjia
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblHeader_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLibraryPath_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTracksLoaded_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBuildStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBuildLibrary_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
@@ -169,6 +249,8 @@ namespace Nadjia
 
             document.Save(outputXmlPath);
         }
+
+
 
         private static string CleanXmlText(string value)
         {

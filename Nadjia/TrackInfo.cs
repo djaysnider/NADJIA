@@ -17,5 +17,12 @@ namespace Nadjia
         public string Year { get; set; }
         public string Genre { get; set; }
         public string FilePath { get; set; }
+
+        public override string ToString()
+        {
+            return Artist + " - " + Title + " (" + Year + ")";
+        }
     }
 }
+
+ 
