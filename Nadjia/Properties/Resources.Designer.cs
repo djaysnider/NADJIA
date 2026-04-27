@@ -63,6 +63,26 @@ namespace Nadjia.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lb {
+            get {
+                object obj = ResourceManager.GetObject("lb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lrback1 {
+            get {
+                object obj = ResourceManager.GetObject("lrback1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nadjia_logo {
             get {
                 object obj = ResourceManager.GetObject("nadjia-logo", resourceCulture);
@@ -96,6 +116,16 @@ namespace Nadjia.Properties {
         internal static System.Drawing.Bitmap network_on {
             get {
                 object obj = ResourceManager.GetObject("network-on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reload_icon {
+            get {
+                object obj = ResourceManager.GetObject("reload-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

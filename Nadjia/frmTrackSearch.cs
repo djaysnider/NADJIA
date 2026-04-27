@@ -24,6 +24,15 @@ namespace Nadjia
 
         private void frmTrackSearch_Load(object sender, EventArgs e)
         {
+            this.BackColor = System.Drawing.Color.FromArgb(18, 14, 28);
+            this.ClientSize = new System.Drawing.Size(620, 330);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+
+            StyleButton(btnSearch);
+            StyleButton(btnClose);
+
             // Populate dropdown with enum values
             cboSearchField.DataSource = Enum.GetValues(typeof(TrackSearchField));
 
@@ -138,6 +147,11 @@ namespace Nadjia
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             btnSearch_Click(sender, e);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

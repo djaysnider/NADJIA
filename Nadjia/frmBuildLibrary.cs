@@ -27,7 +27,7 @@ namespace Nadjia
             StyleButton(btnRebuild);
             StyleButton(btnChange);
             StyleButton(btnClose);
-            lblLibraryPath.Text = nadiaConfig.trackLibraryFolder;
+            lblLibraryPath.Text = nadjiaConfig.trackLibraryFolder;
 
             if (AppState.MusicLibrary != null)
             {

@@ -31,3 +31,5 @@ C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.exe
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.pdb
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmDashboard.resources
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmTrackSearch.resources
+C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmSetConfig.resources
+C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmLightningRound.resources

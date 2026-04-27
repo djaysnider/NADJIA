@@ -38,10 +38,10 @@ namespace Nadjia
             }
             // Copy results to configuration.
             //       MessageBox.Show(NewDoc.Declaration + "\r\n" + NewDoc.ToString());
-            nadiaConfig.trackLibraryFolder = NewDoc.Root.Element("TrackLibrary").Value;
-            nadiaConfig.LRQuestionsFolder = NewDoc.Root.Element("LRQuestions").Value;
-            nadiaConfig.soundboardLibraryFolder = NewDoc.Root.Element("SoundboardFiles").Value;
-            nadiaConfig.masterDatabase = NewDoc.Root.Element("MasterDatabase").Value;
+            nadjiaConfig.trackLibraryFolder = NewDoc.Root.Element("TrackLibrary").Value;
+            nadjiaConfig.LRQuestionsFolder = NewDoc.Root.Element("LRQuestions").Value;
+            nadjiaConfig.soundboardLibraryFolder = NewDoc.Root.Element("SoundboardFiles").Value;
+            nadjiaConfig.masterDatabase = NewDoc.Root.Element("MasterDatabase").Value;
 
         }
 
@@ -212,6 +212,18 @@ namespace Nadjia
         private void trackLibraryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmTrackSearch();
+            frm.Show();
+        }
+
+        private void configToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSetConfig();
+            frm.Show();
+        }
+
+        private void lightningRoungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmLightningRound();
             frm.Show();
         }
     }

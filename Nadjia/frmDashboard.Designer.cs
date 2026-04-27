@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.stationLogo = new System.Windows.Forms.PictureBox();
             this.lblPoweredBy = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.tracksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.videosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.photosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.launchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoDJToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showTimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,7 +94,6 @@
             this.lblSystemStatus4 = new System.Windows.Forms.Label();
             this.lblSystemStatus3 = new System.Windows.Forms.Label();
             this.lblSystemStatus5 = new System.Windows.Forms.Label();
-            this.trackLibraryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -107,7 +108,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Nadjia.Properties.Resources.nadjia_logo_transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(799, 516);
             this.pictureBox1.Name = "pictureBox1";
@@ -119,7 +120,7 @@
             // 
             this.stationLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.stationLogo.BackColor = System.Drawing.Color.Transparent;
-            this.stationLogo.BackgroundImage = global::Nadjia.Properties.Resources.station_logo;
+            this.stationLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stationLogo.BackgroundImage")));
             this.stationLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stationLogo.Location = new System.Drawing.Point(773, 165);
             this.stationLogo.Name = "stationLogo";
@@ -153,7 +154,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Nadjia.Properties.Resources.network_off;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 215);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
@@ -162,7 +163,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Nadjia.Properties.Resources.track_player_off;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(12, 271);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
@@ -171,7 +172,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Nadjia.Properties.Resources.timer_off;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(12, 383);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
@@ -180,7 +181,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Nadjia.Properties.Resources.soundboard_off;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(12, 327);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
@@ -189,7 +190,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Nadjia.Properties.Resources.settings_off;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(12, 439);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(50, 50);
@@ -228,15 +229,16 @@
             this.configToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.configToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
-            this.configToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.configToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.configToolStripMenuItem.Text = "Settings";
+            this.configToolStripMenuItem.Click += new System.EventHandler(this.configToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -303,6 +305,15 @@
             this.photosToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
             this.photosToolStripMenuItem.Text = "Photos";
             // 
+            // trackLibraryToolStripMenuItem
+            // 
+            this.trackLibraryToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.trackLibraryToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
+            this.trackLibraryToolStripMenuItem.Name = "trackLibraryToolStripMenuItem";
+            this.trackLibraryToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
+            this.trackLibraryToolStripMenuItem.Text = "Track Library";
+            this.trackLibraryToolStripMenuItem.Click += new System.EventHandler(this.trackLibraryToolStripMenuItem_Click);
+            // 
             // launchToolStripMenuItem
             // 
             this.launchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -342,6 +353,7 @@
             this.lightningRoungToolStripMenuItem.Name = "lightningRoungToolStripMenuItem";
             this.lightningRoungToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.lightningRoungToolStripMenuItem.Text = "Lightning Round";
+            this.lightningRoungToolStripMenuItem.Click += new System.EventHandler(this.lightningRoungToolStripMenuItem_Click);
             // 
             // soundboardToolStripMenuItem
             // 
@@ -732,21 +744,12 @@
             this.lblSystemStatus5.TabIndex = 27;
             this.lblSystemStatus5.Text = "... INITIALIZING ...";
             // 
-            // trackLibraryToolStripMenuItem
-            // 
-            this.trackLibraryToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.trackLibraryToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
-            this.trackLibraryToolStripMenuItem.Name = "trackLibraryToolStripMenuItem";
-            this.trackLibraryToolStripMenuItem.Size = new System.Drawing.Size(234, 24);
-            this.trackLibraryToolStripMenuItem.Text = "Track Library";
-            this.trackLibraryToolStripMenuItem.Click += new System.EventHandler(this.trackLibraryToolStripMenuItem_Click);
-            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Nadjia.Properties.Resources.splash;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1197, 649);
             this.Controls.Add(this.lblSystemStatus5);

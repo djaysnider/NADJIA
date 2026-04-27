@@ -6,13 +6,6 @@ using System.Windows.Forms;
 
 namespace Nadjia
 {
-    static class nadiaConfig
-    {
-        public static string trackLibraryFolder;
-        public static string LRQuestionsFolder;
-        public static string soundboardLibraryFolder;
-        public static string masterDatabase;
-    }
     internal static class Program
     {
         /// <summary>
