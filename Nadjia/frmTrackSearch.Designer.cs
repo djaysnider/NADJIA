@@ -42,6 +42,7 @@ namespace Nadjia
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cboSearchField = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -50,6 +51,7 @@ namespace Nadjia
             this.lblHeader = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.dgvResults = new System.Windows.Forms.DataGridView();
+            this._resultsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,12 +62,12 @@ namespace Nadjia
             this.cboSearchField.FormattingEnabled = true;
             this.cboSearchField.Location = new System.Drawing.Point(18, 93);
             this.cboSearchField.Name = "cboSearchField";
-            this.cboSearchField.Size = new System.Drawing.Size(121, 21);
+            this.cboSearchField.Size = new System.Drawing.Size(170, 21);
             this.cboSearchField.TabIndex = 0;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(285, 91);
+            this.btnSearch.Location = new System.Drawing.Point(493, 91);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
@@ -77,9 +79,9 @@ namespace Nadjia
             // 
             this.txtSearch.BackColor = System.Drawing.Color.Black;
             this.txtSearch.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtSearch.Location = new System.Drawing.Point(160, 93);
+            this.txtSearch.Location = new System.Drawing.Point(207, 94);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.Size = new System.Drawing.Size(263, 20);
             this.txtSearch.TabIndex = 3;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -117,7 +119,7 @@ namespace Nadjia
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(552, 388);
+            this.btnClose.Location = new System.Drawing.Point(948, 501);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 12;
@@ -133,19 +135,24 @@ namespace Nadjia
             this.dgvResults.AllowUserToResizeRows = false;
             this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResults.Location = new System.Drawing.Point(12, 188);
-            this.dgvResults.MultiSelect = false;
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
             this.dgvResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResults.Size = new System.Drawing.Size(615, 179);
+            this.dgvResults.Size = new System.Drawing.Size(1011, 290);
             this.dgvResults.TabIndex = 13;
+            // 
+            // _resultsMenu
+            // 
+            this._resultsMenu.Name = "_resultsMenu";
+            this._resultsMenu.Size = new System.Drawing.Size(61, 4);
+            this._resultsMenu.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // frmTrackSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(14)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(653, 430);
+            this.ClientSize = new System.Drawing.Size(1035, 536);
             this.Controls.Add(this.dgvResults);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
@@ -173,5 +180,6 @@ namespace Nadjia
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dgvResults;
+        private ContextMenuStrip _resultsMenu;
     }
 }

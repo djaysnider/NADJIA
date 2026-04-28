@@ -204,7 +204,11 @@ namespace Nadjia
             strMyTime= hours.ToString("D2") + ":" + DateTime.Now.TimeOfDay.Minutes.ToString("D2") + ":" + DateTime.Now.TimeOfDay.Seconds.ToString("D2") + AMPM;
             lblAirTime.Text = "AIR TIME: " + strMyTime;
             if ((DateTime.Now.TimeOfDay.Minutes % 10 == 0) && (DateTime.Now.TimeOfDay.Seconds == 0)) { GetForecast(); updateSystemStatus("Weather updated as of " + strMyTime);}
-            if (DateTime.Now.TimeOfDay.Seconds == 0) { GetStreamStats(); updateSystemStatus("Track updated at " + strMyTime); }
+            if (DateTime.Now.TimeOfDay.Seconds == 0) 
+            { 
+                GetStreamStats(); 
+//                updateSystemStatus("Track updated at " + strMyTime); 
+            }
         }
 
         private void rebuildDatabaseToolStripMenuItem_Click(object sender, EventArgs e)

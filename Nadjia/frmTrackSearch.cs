@@ -25,7 +25,7 @@ namespace Nadjia
         private void frmTrackSearch_Load(object sender, EventArgs e)
         {
             this.BackColor = System.Drawing.Color.FromArgb(18, 14, 28);
-            this.ClientSize = new System.Drawing.Size(620, 330);
+//            this.ClientSize = new System.Drawing.Size(620, 330);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -42,7 +42,80 @@ namespace Nadjia
             cboSearchField.SelectedItem = TrackSearchField.All;
 
             SetupGrid();
+            SetupResultsContextMenu();
         }
+
+        private void SetupResultsContextMenu()
+        {
+            _resultsMenu = new ContextMenuStrip();
+
+            var saveNewPlaylist = new ToolStripMenuItem("Save to new playlist");
+            saveNewPlaylist.Click += saveNewPlaylist_Click;
+
+            var saveExistingPlaylist = new ToolStripMenuItem("Save to existing playlist");
+            saveExistingPlaylist.Click += saveExistingPlaylist_Click;
+
+            var editId3Tag = new ToolStripMenuItem("Edit ID3 tag");
+            editId3Tag.Click += editId3Tag_Click;
+
+            _resultsMenu.Items.Add(saveNewPlaylist);
+            _resultsMenu.Items.Add(saveExistingPlaylist);
+            _resultsMenu.Items.Add(new ToolStripSeparator());
+            _resultsMenu.Items.Add(editId3Tag);
+
+            dgvResults.ContextMenuStrip = _resultsMenu;
+        }
+
+        private void editId3Tag_Click(object sender, EventArgs e)
+        {
+            List<TrackInfo> selectedTracks = GetSelectedTracks();
+
+            if (selectedTracks.Count != 1)
+            {
+                MessageBox.Show("Select exactly one track to edit its ID3 tag.");
+                return;
+            }
+
+            frmEditId3Tag editor = new frmEditId3Tag(selectedTracks[0]);
+
+            if (editor.ShowDialog() == DialogResult.OK)
+            {
+                btnSearch_Click(null, null);
+            }
+        }
+
+        private List<TrackInfo> GetSelectedTracks()
+        {
+            var selectedTracks = new List<TrackInfo>();
+
+            foreach (DataGridViewRow row in dgvResults.SelectedRows)
+            {
+                TrackInfo track = row.DataBoundItem as TrackInfo;
+
+                if (track != null)
+                    selectedTracks.Add(track);
+            }
+
+            return selectedTracks;
+        }
+        private void saveExistingPlaylist_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Save to existing playlist is coming next.");
+        }
+        private void saveNewPlaylist_Click(object sender, EventArgs e)
+        {
+            List<TrackInfo> selectedTracks = GetSelectedTracks();
+
+            if (selectedTracks.Count == 0)
+            {
+                MessageBox.Show("Select one or more tracks first.");
+                return;
+            }
+
+            frmPlaylistEditor editor = new frmPlaylistEditor(selectedTracks);
+            editor.ShowDialog();
+        }
+
         private void SetupGrid()
         {
             dgvResults.Columns.Clear();
@@ -152,6 +225,11 @@ namespace Nadjia
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

@@ -34,3 +34,5 @@ C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmTrackSear
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmSetConfig.resources
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmLightningRound.resources
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmSoundboard.resources
+C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmPlaylistEditor.resources
+C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmEditId3Tag.resources
