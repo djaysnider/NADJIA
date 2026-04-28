@@ -212,6 +212,7 @@
             this.menuMain.Size = new System.Drawing.Size(1197, 28);
             this.menuMain.TabIndex = 9;
             this.menuMain.Text = "menuStrip1";
+            this.menuMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuMain_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -229,7 +230,7 @@
             this.configToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.configToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
-            this.configToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.configToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.configToolStripMenuItem.Text = "Settings";
             this.configToolStripMenuItem.Click += new System.EventHandler(this.configToolStripMenuItem_Click);
             // 
@@ -238,7 +239,7 @@
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -362,6 +363,7 @@
             this.soundboardToolStripMenuItem.Name = "soundboardToolStripMenuItem";
             this.soundboardToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.soundboardToolStripMenuItem.Text = "Soundboard";
+            this.soundboardToolStripMenuItem.Click += new System.EventHandler(this.soundboardToolStripMenuItem_Click);
             // 
             // voiceToolStripMenuItem
             // 

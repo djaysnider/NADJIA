@@ -33,3 +33,4 @@ C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmDashboard
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmTrackSearch.resources
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmSetConfig.resources
 C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmLightningRound.resources
+C:\Users\djays\Documents\Development\Nadjia\Nadjia\obj\Debug\Nadjia.frmSoundboard.resources

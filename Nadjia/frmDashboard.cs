@@ -30,7 +30,7 @@ namespace Nadjia
             {
                 // Read the document from disk. 
                 //                NewDoc = XDocument.Load(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\EMMA_Settings.XML");
-                NewDoc = XDocument.Load("NADJIA_Settings.XML");
+                NewDoc = XDocument.Load("nadjiaSettings.XML");
             }
             catch (FileNotFoundException exception)
             {
@@ -42,10 +42,14 @@ namespace Nadjia
             nadjiaConfig.LRQuestionsFolder = NewDoc.Root.Element("LRQuestions").Value;
             nadjiaConfig.soundboardLibraryFolder = NewDoc.Root.Element("SoundboardFiles").Value;
             nadjiaConfig.masterDatabase = NewDoc.Root.Element("MasterDatabase").Value;
+            nadjiaConfig.dropFolder = NewDoc.Root.Element("dropFolder").Value;
+            nadjiaConfig.sweeperFolder = NewDoc.Root.Element("sweeperFolder").Value;
+            nadjiaConfig.bumperFolder = NewDoc.Root.Element("bumperFolder").Value;
+            nadjiaConfig.advertFolder = NewDoc.Root.Element("advertFolder").Value;
 
         }
 
-//        private List<TrackInfo> _musicLibrary = new List<TrackInfo>();
+        //        private List<TrackInfo> _musicLibrary = new List<TrackInfo>();
         private List<Label> _statusLabels;
 
         public void GetForecast()
@@ -129,7 +133,7 @@ namespace Nadjia
                 }
                 catch (WebException WE)
                 {
-                    TryAgain = MessageBox.Show("Couldn't obtain the server data!\r\nTry Again?", "Data Download Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    TryAgain = MessageBox.Show("Couldn't obtain the server data!\r\n" + WE.Message + "\r\nTry Again?", "Data Download Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 }
             }
             
@@ -224,6 +228,17 @@ namespace Nadjia
         private void lightningRoungToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmLightningRound();
+            frm.Show();
+        }
+
+        private void menuMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void soundboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSoundboard();
             frm.Show();
         }
     }

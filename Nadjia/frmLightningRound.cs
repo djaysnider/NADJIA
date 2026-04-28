@@ -23,9 +23,9 @@ namespace Nadjia
         private void frmLightningRound_Load(object sender, EventArgs e)
         {
             this.BackColor = System.Drawing.Color.FromArgb(18, 14, 28);
-            this.ClientSize = new System.Drawing.Size(620, 330);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
+//           this.ClientSize = new System.Drawing.Size(620, 330);
+//           this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+//            this.MaximizeBox = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 
             StyleButton(btnClose);
@@ -70,7 +70,7 @@ namespace Nadjia
         {
             // DirectoryInfo d = New;
             // Int32 intFiles = 0;
-            Int32 a = 0;
+            // Int32 a = 0;
             Int32 intMynum = 0;
             string strImagePath = "";
 

@@ -47,11 +47,12 @@ namespace Nadjia
             // 
             // btnAdvance
             // 
+            this.btnAdvance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdvance.BackgroundImage = global::Nadjia.Properties.Resources.lb;
             this.btnAdvance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdvance.Location = new System.Drawing.Point(713, 12);
+            this.btnAdvance.Location = new System.Drawing.Point(729, 12);
             this.btnAdvance.Name = "btnAdvance";
-            this.btnAdvance.Size = new System.Drawing.Size(75, 70);
+            this.btnAdvance.Size = new System.Drawing.Size(50, 50);
             this.btnAdvance.TabIndex = 0;
             this.btnAdvance.UseVisualStyleBackColor = true;
             this.btnAdvance.Click += new System.EventHandler(this.btnAdvance_Click);
@@ -62,13 +63,14 @@ namespace Nadjia
             this.btnSpin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSpin.Location = new System.Drawing.Point(12, 12);
             this.btnSpin.Name = "btnSpin";
-            this.btnSpin.Size = new System.Drawing.Size(75, 70);
+            this.btnSpin.Size = new System.Drawing.Size(50, 50);
             this.btnSpin.TabIndex = 1;
             this.btnSpin.UseVisualStyleBackColor = true;
             this.btnSpin.Click += new System.EventHandler(this.btnSpin_Click);
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Location = new System.Drawing.Point(713, 415);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);

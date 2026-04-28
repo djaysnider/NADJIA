@@ -75,6 +75,12 @@
     <Compile Include="frmSetConfig.Designer.cs">
       <DependentUpon>frmSetConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSoundboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoundboard.designer.cs">
+      <DependentUpon>frmSoundboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTrackSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSetConfig.resx">
       <DependentUpon>frmSetConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSoundboard.resx">
+      <DependentUpon>frmSoundboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrackSearch.resx">
       <DependentUpon>frmTrackSearch.cs</DependentUpon>

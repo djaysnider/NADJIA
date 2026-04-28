@@ -70,10 +70,12 @@ namespace Nadjia
             // 
             // txtBumperPath
             // 
-            this.txtBumperPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBumperPath.Location = new System.Drawing.Point(156, 280);
+            this.txtBumperPath.BackColor = System.Drawing.Color.Black;
+            this.txtBumperPath.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtBumperPath.ForeColor = System.Drawing.Color.Silver;
+            this.txtBumperPath.Location = new System.Drawing.Point(143, 273);
             this.txtBumperPath.Name = "txtBumperPath";
-            this.txtBumperPath.Size = new System.Drawing.Size(263, 29);
+            this.txtBumperPath.Size = new System.Drawing.Size(276, 25);
             this.txtBumperPath.TabIndex = 49;
             // 
             // label5
@@ -81,7 +83,7 @@ namespace Nadjia
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(190)))), ((int)(((byte)(120)))));
-            this.label5.Location = new System.Drawing.Point(14, 283);
+            this.label5.Location = new System.Drawing.Point(14, 275);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 19);
             this.label5.TabIndex = 64;
@@ -89,10 +91,12 @@ namespace Nadjia
             // 
             // txtAdvertPath
             // 
-            this.txtAdvertPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdvertPath.Location = new System.Drawing.Point(156, 241);
+            this.txtAdvertPath.BackColor = System.Drawing.Color.Black;
+            this.txtAdvertPath.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtAdvertPath.ForeColor = System.Drawing.Color.Silver;
+            this.txtAdvertPath.Location = new System.Drawing.Point(143, 238);
             this.txtAdvertPath.Name = "txtAdvertPath";
-            this.txtAdvertPath.Size = new System.Drawing.Size(263, 29);
+            this.txtAdvertPath.Size = new System.Drawing.Size(276, 25);
             this.txtAdvertPath.TabIndex = 47;
             // 
             // label6
@@ -100,7 +104,7 @@ namespace Nadjia
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(190)))), ((int)(((byte)(120)))));
-            this.label6.Location = new System.Drawing.Point(14, 244);
+            this.label6.Location = new System.Drawing.Point(14, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 19);
             this.label6.TabIndex = 63;
@@ -108,10 +112,12 @@ namespace Nadjia
             // 
             // txtDropPath
             // 
-            this.txtDropPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDropPath.Location = new System.Drawing.Point(156, 200);
+            this.txtDropPath.BackColor = System.Drawing.Color.Black;
+            this.txtDropPath.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtDropPath.ForeColor = System.Drawing.Color.Silver;
+            this.txtDropPath.Location = new System.Drawing.Point(143, 203);
             this.txtDropPath.Name = "txtDropPath";
-            this.txtDropPath.Size = new System.Drawing.Size(263, 29);
+            this.txtDropPath.Size = new System.Drawing.Size(276, 25);
             this.txtDropPath.TabIndex = 45;
             // 
             // label7
@@ -119,7 +125,7 @@ namespace Nadjia
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(190)))), ((int)(((byte)(120)))));
-            this.label7.Location = new System.Drawing.Point(14, 203);
+            this.label7.Location = new System.Drawing.Point(14, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 19);
             this.label7.TabIndex = 62;
@@ -127,10 +133,12 @@ namespace Nadjia
             // 
             // txtSweeperPath
             // 
-            this.txtSweeperPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSweeperPath.Location = new System.Drawing.Point(156, 155);
+            this.txtSweeperPath.BackColor = System.Drawing.Color.Black;
+            this.txtSweeperPath.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtSweeperPath.ForeColor = System.Drawing.Color.Silver;
+            this.txtSweeperPath.Location = new System.Drawing.Point(143, 168);
             this.txtSweeperPath.Name = "txtSweeperPath";
-            this.txtSweeperPath.Size = new System.Drawing.Size(263, 29);
+            this.txtSweeperPath.Size = new System.Drawing.Size(276, 25);
             this.txtSweeperPath.TabIndex = 43;
             // 
             // label8
@@ -138,7 +146,7 @@ namespace Nadjia
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(190)))), ((int)(((byte)(120)))));
-            this.label8.Location = new System.Drawing.Point(14, 158);
+            this.label8.Location = new System.Drawing.Point(14, 170);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 19);
             this.label8.TabIndex = 61;
@@ -152,6 +160,7 @@ namespace Nadjia
             this.btnClose.TabIndex = 58;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -161,13 +170,16 @@ namespace Nadjia
             this.btnSave.TabIndex = 57;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // txtDBPath
             // 
-            this.txtDBPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDBPath.Location = new System.Drawing.Point(156, 71);
+            this.txtDBPath.BackColor = System.Drawing.Color.Black;
+            this.txtDBPath.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtDBPath.ForeColor = System.Drawing.Color.Silver;
+            this.txtDBPath.Location = new System.Drawing.Point(143, 98);
             this.txtDBPath.Name = "txtDBPath";
-            this.txtDBPath.Size = new System.Drawing.Size(263, 29);
+            this.txtDBPath.Size = new System.Drawing.Size(276, 25);
             this.txtDBPath.TabIndex = 39;
             // 
             // label4
@@ -175,7 +187,7 @@ namespace Nadjia
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(190)))), ((int)(((byte)(120)))));
-            this.label4.Location = new System.Drawing.Point(14, 74);
+            this.label4.Location = new System.Drawing.Point(14, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 19);
             this.label4.TabIndex = 60;
@@ -183,10 +195,12 @@ namespace Nadjia
             // 
             // txtSoundboardPath
             // 
-            this.txtSoundboardPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoundboardPath.Location = new System.Drawing.Point(156, 366);
+            this.txtSoundboardPath.BackColor = System.Drawing.Color.Black;
+            this.txtSoundboardPath.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtSoundboardPath.ForeColor = System.Drawing.Color.Silver;
+            this.txtSoundboardPath.Location = new System.Drawing.Point(143, 343);
             this.txtSoundboardPath.Name = "txtSoundboardPath";
-            this.txtSoundboardPath.Size = new System.Drawing.Size(263, 29);
+            this.txtSoundboardPath.Size = new System.Drawing.Size(276, 25);
             this.txtSoundboardPath.TabIndex = 54;
             // 
             // label3
@@ -194,7 +208,7 @@ namespace Nadjia
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(190)))), ((int)(((byte)(120)))));
-            this.label3.Location = new System.Drawing.Point(14, 369);
+            this.label3.Location = new System.Drawing.Point(14, 345);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 19);
             this.label3.TabIndex = 59;
@@ -202,10 +216,12 @@ namespace Nadjia
             // 
             // txtLightningPath
             // 
-            this.txtLightningPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLightningPath.Location = new System.Drawing.Point(156, 322);
+            this.txtLightningPath.BackColor = System.Drawing.Color.Black;
+            this.txtLightningPath.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtLightningPath.ForeColor = System.Drawing.Color.Silver;
+            this.txtLightningPath.Location = new System.Drawing.Point(143, 308);
             this.txtLightningPath.Name = "txtLightningPath";
-            this.txtLightningPath.Size = new System.Drawing.Size(263, 29);
+            this.txtLightningPath.Size = new System.Drawing.Size(276, 25);
             this.txtLightningPath.TabIndex = 51;
             // 
             // label2
@@ -213,7 +229,7 @@ namespace Nadjia
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(190)))), ((int)(((byte)(120)))));
-            this.label2.Location = new System.Drawing.Point(14, 325);
+            this.label2.Location = new System.Drawing.Point(14, 310);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 56;
@@ -221,10 +237,12 @@ namespace Nadjia
             // 
             // txtLibraryPath
             // 
-            this.txtLibraryPath.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLibraryPath.Location = new System.Drawing.Point(156, 111);
+            this.txtLibraryPath.BackColor = System.Drawing.Color.Black;
+            this.txtLibraryPath.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtLibraryPath.ForeColor = System.Drawing.Color.Silver;
+            this.txtLibraryPath.Location = new System.Drawing.Point(143, 133);
             this.txtLibraryPath.Name = "txtLibraryPath";
-            this.txtLibraryPath.Size = new System.Drawing.Size(263, 29);
+            this.txtLibraryPath.Size = new System.Drawing.Size(276, 25);
             this.txtLibraryPath.TabIndex = 41;
             // 
             // label1
@@ -232,7 +250,7 @@ namespace Nadjia
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(190)))), ((int)(((byte)(120)))));
-            this.label1.Location = new System.Drawing.Point(14, 114);
+            this.label1.Location = new System.Drawing.Point(14, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 19);
             this.label1.TabIndex = 53;
@@ -264,81 +282,89 @@ namespace Nadjia
             // 
             this.bumperFolderSelector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bumperFolderSelector.BackgroundImage")));
             this.bumperFolderSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bumperFolderSelector.Location = new System.Drawing.Point(425, 287);
+            this.bumperFolderSelector.Location = new System.Drawing.Point(425, 273);
             this.bumperFolderSelector.Name = "bumperFolderSelector";
             this.bumperFolderSelector.Size = new System.Drawing.Size(26, 22);
             this.bumperFolderSelector.TabIndex = 50;
             this.bumperFolderSelector.UseVisualStyleBackColor = true;
+            this.bumperFolderSelector.Click += new System.EventHandler(this.bumperFolderSelector_Click_1);
             // 
             // advertFolderSelector
             // 
             this.advertFolderSelector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("advertFolderSelector.BackgroundImage")));
             this.advertFolderSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.advertFolderSelector.Location = new System.Drawing.Point(425, 248);
+            this.advertFolderSelector.Location = new System.Drawing.Point(425, 238);
             this.advertFolderSelector.Name = "advertFolderSelector";
             this.advertFolderSelector.Size = new System.Drawing.Size(26, 22);
             this.advertFolderSelector.TabIndex = 48;
             this.advertFolderSelector.UseVisualStyleBackColor = true;
+            this.advertFolderSelector.Click += new System.EventHandler(this.advertFolderSelector_Click_1);
             // 
             // dropsFolderSelector
             // 
             this.dropsFolderSelector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dropsFolderSelector.BackgroundImage")));
             this.dropsFolderSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dropsFolderSelector.Location = new System.Drawing.Point(425, 204);
+            this.dropsFolderSelector.Location = new System.Drawing.Point(425, 203);
             this.dropsFolderSelector.Name = "dropsFolderSelector";
             this.dropsFolderSelector.Size = new System.Drawing.Size(26, 22);
             this.dropsFolderSelector.TabIndex = 46;
             this.dropsFolderSelector.UseVisualStyleBackColor = true;
+            this.dropsFolderSelector.Click += new System.EventHandler(this.dropsFolderSelector_Click_1);
             // 
             // sweeperFolderSelector
             // 
             this.sweeperFolderSelector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sweeperFolderSelector.BackgroundImage")));
             this.sweeperFolderSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.sweeperFolderSelector.Location = new System.Drawing.Point(425, 159);
+            this.sweeperFolderSelector.Location = new System.Drawing.Point(425, 168);
             this.sweeperFolderSelector.Name = "sweeperFolderSelector";
             this.sweeperFolderSelector.Size = new System.Drawing.Size(26, 22);
             this.sweeperFolderSelector.TabIndex = 44;
             this.sweeperFolderSelector.UseVisualStyleBackColor = true;
+            this.sweeperFolderSelector.Click += new System.EventHandler(this.sweeperFolderSelector_Click_1);
             // 
             // dbFolderSelector
             // 
             this.dbFolderSelector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dbFolderSelector.BackgroundImage")));
             this.dbFolderSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dbFolderSelector.Location = new System.Drawing.Point(425, 75);
+            this.dbFolderSelector.Location = new System.Drawing.Point(425, 98);
             this.dbFolderSelector.Name = "dbFolderSelector";
             this.dbFolderSelector.Size = new System.Drawing.Size(26, 22);
             this.dbFolderSelector.TabIndex = 40;
             this.dbFolderSelector.UseVisualStyleBackColor = true;
+            this.dbFolderSelector.Click += new System.EventHandler(this.dbFolderSelector_Click_1);
             // 
             // soundboardFolderSelector
             // 
             this.soundboardFolderSelector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("soundboardFolderSelector.BackgroundImage")));
             this.soundboardFolderSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.soundboardFolderSelector.Location = new System.Drawing.Point(425, 370);
+            this.soundboardFolderSelector.Location = new System.Drawing.Point(425, 343);
             this.soundboardFolderSelector.Name = "soundboardFolderSelector";
             this.soundboardFolderSelector.Size = new System.Drawing.Size(26, 22);
             this.soundboardFolderSelector.TabIndex = 55;
             this.soundboardFolderSelector.UseVisualStyleBackColor = true;
+            this.soundboardFolderSelector.Click += new System.EventHandler(this.soundboardFolderSelector_Click_1);
             // 
             // lrFolderSelector
             // 
             this.lrFolderSelector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lrFolderSelector.BackgroundImage")));
             this.lrFolderSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lrFolderSelector.Location = new System.Drawing.Point(425, 325);
+            this.lrFolderSelector.Location = new System.Drawing.Point(425, 308);
             this.lrFolderSelector.Name = "lrFolderSelector";
             this.lrFolderSelector.Size = new System.Drawing.Size(26, 22);
             this.lrFolderSelector.TabIndex = 52;
             this.lrFolderSelector.UseVisualStyleBackColor = true;
+            this.lrFolderSelector.Click += new System.EventHandler(this.lrFolderSelector_Click_1);
             // 
             // libraryFolderSelector
             // 
             this.libraryFolderSelector.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("libraryFolderSelector.BackgroundImage")));
             this.libraryFolderSelector.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.libraryFolderSelector.Location = new System.Drawing.Point(425, 112);
+            this.libraryFolderSelector.Location = new System.Drawing.Point(425, 133);
             this.libraryFolderSelector.Name = "libraryFolderSelector";
             this.libraryFolderSelector.Size = new System.Drawing.Size(26, 22);
             this.libraryFolderSelector.TabIndex = 42;
             this.libraryFolderSelector.UseVisualStyleBackColor = true;
+            this.libraryFolderSelector.Click += new System.EventHandler(this.libraryFolderSelector_Click_1);
             // 
             // frmSetConfig
             // 
@@ -375,7 +401,7 @@ namespace Nadjia
             this.Controls.Add(this.txtLibraryPath);
             this.Controls.Add(this.label1);
             this.Name = "frmSetConfig";
-            this.Text = "frmSetConfig";
+            this.Text = "N.A.D.J.I.A. Configuration Settings";
             this.Load += new System.EventHandler(this.frmSetConfig_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
