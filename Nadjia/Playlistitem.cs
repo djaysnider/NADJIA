@@ -25,5 +25,21 @@ namespace Nadjia
 
         // Optional sequence number
         public int Sequence { get; set; }
+
+        public string DisplayText
+        {
+            get
+            {
+                if (Track != null)
+                {
+                    string artist = string.IsNullOrWhiteSpace(Track.Artist) ? "Unknown Artist" : Track.Artist;
+                    string album = string.IsNullOrWhiteSpace(Track.Album) ? "Unknown Album" : Track.Album;
+
+                    return $"{Title} ({artist} / {album})";
+                }
+
+                return Title;
+            }
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Nadjia
         private void frmSetConfig_Load_1(object sender, EventArgs e)
         {
             this.BackColor = System.Drawing.Color.FromArgb(18, 14, 28);
- //           this.ClientSize = new System.Drawing.Size(620, 330);
+            this.ClientSize = new System.Drawing.Size(496, 531);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -36,6 +36,8 @@ namespace Nadjia
             txtLibraryPath.Text = nadjiaConfig.trackLibraryFolder;
             txtLightningPath.Text = nadjiaConfig.LRQuestionsFolder;
             txtSoundboardPath.Text = nadjiaConfig.soundboardLibraryFolder;
+            txtPlaylistPath.Text = nadjiaConfig.playlistFolder;
+            txtQueuePath.Text = nadjiaConfig.queueFolder;
             txtDBPath.Text = nadjiaConfig.masterDatabase;
             txtDropPath.Text = nadjiaConfig.dropFolder;
             txtSweeperPath.Text = nadjiaConfig.sweeperFolder;
@@ -129,6 +131,8 @@ namespace Nadjia
                 new XElement("TrackLibrary", txtLibraryPath.Text),
                 new XElement("LRQuestions", txtLightningPath.Text),
                 new XElement("SoundboardFiles", txtSoundboardPath.Text),
+                new XElement("playlistFolder", txtPlaylistPath.Text),
+                new XElement("queueFolder", txtQueuePath.Text),
                 new XElement("MasterDatabase", txtDBPath.Text),
                 new XElement("dropFolder", txtDropPath.Text),
                 new XElement("sweeperFolder", txtSweeperPath.Text),
@@ -143,6 +147,8 @@ namespace Nadjia
 
             nadjiaConfig.trackLibraryFolder = txtLibraryPath.Text;
             nadjiaConfig.LRQuestionsFolder = txtLightningPath.Text;
+            nadjiaConfig.playlistFolder = txtPlaylistPath.Text;
+            nadjiaConfig.queueFolder = txtQueuePath.Text;
             nadjiaConfig.soundboardLibraryFolder = txtSoundboardPath.Text;
             nadjiaConfig.masterDatabase = txtDBPath.Text;
             nadjiaConfig.sweeperFolder = txtSweeperPath.Text;
@@ -154,6 +160,29 @@ namespace Nadjia
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();    
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void queueFolderSelector_Click(object sender, EventArgs e)
+        {
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                txtQueuePath.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                txtPlaylistPath.Text = folderBrowserDialog1.SelectedPath;
+            }
         }
     }
 }

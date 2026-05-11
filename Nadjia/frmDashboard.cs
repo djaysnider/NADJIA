@@ -41,6 +41,8 @@ namespace Nadjia
             nadjiaConfig.trackLibraryFolder = NewDoc.Root.Element("TrackLibrary").Value;
             nadjiaConfig.LRQuestionsFolder = NewDoc.Root.Element("LRQuestions").Value;
             nadjiaConfig.soundboardLibraryFolder = NewDoc.Root.Element("SoundboardFiles").Value;
+            nadjiaConfig.playlistFolder = NewDoc.Root.Element("playlistFolder").Value;
+            nadjiaConfig.queueFolder = NewDoc.Root.Element("queueFolder").Value;
             nadjiaConfig.masterDatabase = NewDoc.Root.Element("MasterDatabase").Value;
             nadjiaConfig.dropFolder = NewDoc.Root.Element("dropFolder").Value;
             nadjiaConfig.sweeperFolder = NewDoc.Root.Element("sweeperFolder").Value;
@@ -203,12 +205,15 @@ namespace Nadjia
 
             strMyTime= hours.ToString("D2") + ":" + DateTime.Now.TimeOfDay.Minutes.ToString("D2") + ":" + DateTime.Now.TimeOfDay.Seconds.ToString("D2") + AMPM;
             lblAirTime.Text = "AIR TIME: " + strMyTime;
+            AppState.sysTime = strMyTime;
             if ((DateTime.Now.TimeOfDay.Minutes % 10 == 0) && (DateTime.Now.TimeOfDay.Seconds == 0)) { GetForecast(); updateSystemStatus("Weather updated as of " + strMyTime);}
+            AppState.sysWeather = lblWeather.Text;
             if (DateTime.Now.TimeOfDay.Seconds == 0) 
             { 
                 GetStreamStats(); 
 //                updateSystemStatus("Track updated at " + strMyTime); 
             }
+            AppState.sysConnections = lblActiveStreams.Text + " / " + lblPeakStreams.Text + " / " + lblDuplicateStreams.Text;
         }
 
         private void rebuildDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -243,6 +248,30 @@ namespace Nadjia
         private void soundboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmSoundboard();
+            frm.Show();
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSetConfig();
+            frm.Show();
+        }
+
+        private void btnSoundboard_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSoundboard();
+            frm.Show();
+        }
+
+        private void btnConsoleDesk_Click(object sender, EventArgs e)
+        {
+            var frm = new frmConsoleDesk();
+            frm.Show();
+        }
+
+        private void autoDJToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmConsoleDesk();
             frm.Show();
         }
     }

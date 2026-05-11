@@ -40,6 +40,35 @@ namespace Nadjia
             document.Save(outputPath);
         }
 
+        public static List<TrackInfo> LoadPlaylist(string inputPath)
+        {
+            List<TrackInfo> tracks = new List<TrackInfo>();
+
+            if (!File.Exists(inputPath))
+                return tracks;
+
+            XDocument document = XDocument.Load(inputPath);
+
+            XElement tracksElement = document.Root?.Element("Tracks");
+
+            if (tracksElement == null)
+                return tracks;
+
+            foreach (XElement trackElement in tracksElement.Elements("Track"))
+            {
+                tracks.Add(new TrackInfo
+                {
+                    Artist = (string)trackElement.Element("Artist") ?? "",
+                    Title = (string)trackElement.Element("Title") ?? "",
+                    Album = (string)trackElement.Element("Album") ?? "",
+                    Year = (string)trackElement.Element("Year") ?? "",
+                    Genre = (string)trackElement.Element("Genre") ?? "",
+                    FilePath = (string)trackElement.Element("FilePath") ?? ""
+                });
+            }
+
+            return tracks;
+        }
         private static string CleanXmlText(string value)
         {
             if (string.IsNullOrEmpty(value))

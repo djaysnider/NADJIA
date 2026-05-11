@@ -34,11 +34,6 @@
             this.stationLogo = new System.Windows.Forms.PictureBox();
             this.lblPoweredBy = new System.Windows.Forms.Label();
             this.lblTagLine = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,13 +89,13 @@
             this.lblSystemStatus4 = new System.Windows.Forms.Label();
             this.lblSystemStatus3 = new System.Windows.Forms.Label();
             this.lblSystemStatus5 = new System.Windows.Forms.Label();
+            this.btnStream = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
+            this.btnSoundboard = new System.Windows.Forms.Button();
+            this.btnConsoleDesk = new System.Windows.Forms.Button();
+            this.btnTimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,7 +105,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(799, 516);
+            this.pictureBox1.Location = new System.Drawing.Point(799, 540);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(320, 53);
             this.pictureBox1.TabIndex = 0;
@@ -122,7 +117,7 @@
             this.stationLogo.BackColor = System.Drawing.Color.Transparent;
             this.stationLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stationLogo.BackgroundImage")));
             this.stationLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stationLogo.Location = new System.Drawing.Point(773, 165);
+            this.stationLogo.Location = new System.Drawing.Point(773, 189);
             this.stationLogo.Name = "stationLogo";
             this.stationLogo.Size = new System.Drawing.Size(382, 379);
             this.stationLogo.TabIndex = 1;
@@ -134,7 +129,7 @@
             this.lblPoweredBy.AutoSize = true;
             this.lblPoweredBy.BackColor = System.Drawing.Color.Transparent;
             this.lblPoweredBy.Font = new System.Drawing.Font("OCRATTRegular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoweredBy.Location = new System.Drawing.Point(800, 498);
+            this.lblPoweredBy.Location = new System.Drawing.Point(800, 522);
             this.lblPoweredBy.Name = "lblPoweredBy";
             this.lblPoweredBy.Size = new System.Drawing.Size(108, 17);
             this.lblPoweredBy.TabIndex = 2;
@@ -146,61 +141,16 @@
             this.lblTagLine.BackColor = System.Drawing.Color.Transparent;
             this.lblTagLine.Font = new System.Drawing.Font("OCRATTRegular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTagLine.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTagLine.Location = new System.Drawing.Point(799, 570);
+            this.lblTagLine.Location = new System.Drawing.Point(799, 594);
             this.lblTagLine.Name = "lblTagLine";
             this.lblTagLine.Size = new System.Drawing.Size(361, 39);
             this.lblTagLine.TabIndex = 3;
             this.lblTagLine.Text = "NETWORKED AUTONOMOUS DISC JOCKEY AND IMPROVISATIONAL ASSISTANT";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 215);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 271);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(12, 383);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(12, 327);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(12, 439);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
-            // 
             // menuMain
             // 
             this.menuMain.BackColor = System.Drawing.Color.Black;
-            this.menuMain.Font = new System.Drawing.Font("OCRATTRegular", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuMain.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.databaseToolStripMenuItem,
@@ -209,7 +159,7 @@
             this.playerToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(1197, 28);
+            this.menuMain.Size = new System.Drawing.Size(1197, 33);
             this.menuMain.TabIndex = 9;
             this.menuMain.Text = "menuStrip1";
             this.menuMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuMain_ItemClicked);
@@ -219,10 +169,10 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.configToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("OCRATTRegular", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // configToolStripMenuItem
@@ -337,7 +287,8 @@
             this.autoDJToolStripMenuItem.ForeColor = System.Drawing.Color.DarkViolet;
             this.autoDJToolStripMenuItem.Name = "autoDJToolStripMenuItem";
             this.autoDJToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
-            this.autoDJToolStripMenuItem.Text = "AutoDJ";
+            this.autoDJToolStripMenuItem.Text = "Console Desk";
+            this.autoDJToolStripMenuItem.Click += new System.EventHandler(this.autoDJToolStripMenuItem_Click);
             // 
             // showTimerToolStripMenuItem
             // 
@@ -535,10 +486,10 @@
             // 
             this.lblAirTimeTitle.AutoSize = true;
             this.lblAirTimeTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblAirTimeTitle.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAirTimeTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAirTimeTitle.Location = new System.Drawing.Point(90, 74);
             this.lblAirTimeTitle.Name = "lblAirTimeTitle";
-            this.lblAirTimeTitle.Size = new System.Drawing.Size(338, 34);
+            this.lblAirTimeTitle.Size = new System.Drawing.Size(252, 37);
             this.lblAirTimeTitle.TabIndex = 10;
             this.lblAirTimeTitle.Text = "CURRENT AIR TIME:";
             // 
@@ -546,10 +497,10 @@
             // 
             this.lblActiveStreamsTitle.AutoSize = true;
             this.lblActiveStreamsTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblActiveStreamsTitle.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveStreamsTitle.Location = new System.Drawing.Point(90, 161);
+            this.lblActiveStreamsTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveStreamsTitle.Location = new System.Drawing.Point(90, 143);
             this.lblActiveStreamsTitle.Name = "lblActiveStreamsTitle";
-            this.lblActiveStreamsTitle.Size = new System.Drawing.Size(300, 34);
+            this.lblActiveStreamsTitle.Size = new System.Drawing.Size(228, 37);
             this.lblActiveStreamsTitle.TabIndex = 11;
             this.lblActiveStreamsTitle.Text = "ACTIVE STREAMS:";
             // 
@@ -557,10 +508,10 @@
             // 
             this.lblPeakStreamsTitle.AutoSize = true;
             this.lblPeakStreamsTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblPeakStreamsTitle.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeakStreamsTitle.Location = new System.Drawing.Point(90, 205);
+            this.lblPeakStreamsTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeakStreamsTitle.Location = new System.Drawing.Point(90, 187);
             this.lblPeakStreamsTitle.Name = "lblPeakStreamsTitle";
-            this.lblPeakStreamsTitle.Size = new System.Drawing.Size(262, 34);
+            this.lblPeakStreamsTitle.Size = new System.Drawing.Size(205, 37);
             this.lblPeakStreamsTitle.TabIndex = 12;
             this.lblPeakStreamsTitle.Text = "PEAK STREAMS:";
             // 
@@ -568,10 +519,10 @@
             // 
             this.lblDuplicateStreamsTitle.AutoSize = true;
             this.lblDuplicateStreamsTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblDuplicateStreamsTitle.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuplicateStreamsTitle.Location = new System.Drawing.Point(90, 244);
+            this.lblDuplicateStreamsTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDuplicateStreamsTitle.Location = new System.Drawing.Point(90, 226);
             this.lblDuplicateStreamsTitle.Name = "lblDuplicateStreamsTitle";
-            this.lblDuplicateStreamsTitle.Size = new System.Drawing.Size(357, 34);
+            this.lblDuplicateStreamsTitle.Size = new System.Drawing.Size(276, 37);
             this.lblDuplicateStreamsTitle.TabIndex = 13;
             this.lblDuplicateStreamsTitle.Text = "DUPLICATE STREAMS:";
             // 
@@ -579,10 +530,10 @@
             // 
             this.lblWeatherTitle.AutoSize = true;
             this.lblWeatherTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblWeatherTitle.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeatherTitle.Location = new System.Drawing.Point(90, 327);
+            this.lblWeatherTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeatherTitle.Location = new System.Drawing.Point(90, 309);
             this.lblWeatherTitle.Name = "lblWeatherTitle";
-            this.lblWeatherTitle.Size = new System.Drawing.Size(319, 34);
+            this.lblWeatherTitle.Size = new System.Drawing.Size(263, 37);
             this.lblWeatherTitle.TabIndex = 14;
             this.lblWeatherTitle.Text = "CURRENT WEATHER:";
             // 
@@ -596,10 +547,10 @@
             // 
             this.lblCurrentTrackTitle.AutoSize = true;
             this.lblCurrentTrackTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrentTrackTitle.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentTrackTitle.Location = new System.Drawing.Point(90, 443);
+            this.lblCurrentTrackTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentTrackTitle.Location = new System.Drawing.Point(90, 425);
             this.lblCurrentTrackTitle.Name = "lblCurrentTrackTitle";
-            this.lblCurrentTrackTitle.Size = new System.Drawing.Size(281, 34);
+            this.lblCurrentTrackTitle.Size = new System.Drawing.Size(225, 37);
             this.lblCurrentTrackTitle.TabIndex = 15;
             this.lblCurrentTrackTitle.Text = "CURRENT TRACK:";
             // 
@@ -607,10 +558,10 @@
             // 
             this.lblSystemStatusTitle.AutoSize = true;
             this.lblSystemStatusTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblSystemStatusTitle.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSystemStatusTitle.Location = new System.Drawing.Point(90, 485);
+            this.lblSystemStatusTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemStatusTitle.Location = new System.Drawing.Point(90, 467);
             this.lblSystemStatusTitle.Name = "lblSystemStatusTitle";
-            this.lblSystemStatusTitle.Size = new System.Drawing.Size(281, 34);
+            this.lblSystemStatusTitle.Size = new System.Drawing.Size(213, 37);
             this.lblSystemStatusTitle.TabIndex = 16;
             this.lblSystemStatusTitle.Text = "SYSTEM STATUS:";
             // 
@@ -618,11 +569,11 @@
             // 
             this.lblAirTime.AutoSize = true;
             this.lblAirTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblAirTime.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAirTime.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAirTime.ForeColor = System.Drawing.Color.Silver;
-            this.lblAirTime.Location = new System.Drawing.Point(421, 74);
+            this.lblAirTime.Location = new System.Drawing.Point(378, 74);
             this.lblAirTime.Name = "lblAirTime";
-            this.lblAirTime.Size = new System.Drawing.Size(395, 34);
+            this.lblAirTime.Size = new System.Drawing.Size(220, 37);
             this.lblAirTime.TabIndex = 17;
             this.lblAirTime.Text = "... INITIALIZING ...";
             // 
@@ -630,11 +581,11 @@
             // 
             this.lblActiveStreams.AutoSize = true;
             this.lblActiveStreams.BackColor = System.Drawing.Color.Transparent;
-            this.lblActiveStreams.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveStreams.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActiveStreams.ForeColor = System.Drawing.Color.Silver;
-            this.lblActiveStreams.Location = new System.Drawing.Point(385, 161);
+            this.lblActiveStreams.Location = new System.Drawing.Point(378, 143);
             this.lblActiveStreams.Name = "lblActiveStreams";
-            this.lblActiveStreams.Size = new System.Drawing.Size(395, 34);
+            this.lblActiveStreams.Size = new System.Drawing.Size(220, 37);
             this.lblActiveStreams.TabIndex = 18;
             this.lblActiveStreams.Text = "... INITIALIZING ...";
             // 
@@ -642,11 +593,11 @@
             // 
             this.lblSystemStatus1.AutoSize = true;
             this.lblSystemStatus1.BackColor = System.Drawing.Color.Transparent;
-            this.lblSystemStatus1.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemStatus1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemStatus1.ForeColor = System.Drawing.Color.Silver;
-            this.lblSystemStatus1.Location = new System.Drawing.Point(365, 485);
+            this.lblSystemStatus1.Location = new System.Drawing.Point(378, 467);
             this.lblSystemStatus1.Name = "lblSystemStatus1";
-            this.lblSystemStatus1.Size = new System.Drawing.Size(395, 34);
+            this.lblSystemStatus1.Size = new System.Drawing.Size(220, 37);
             this.lblSystemStatus1.TabIndex = 23;
             this.lblSystemStatus1.Text = "... INITIALIZING ...";
             // 
@@ -654,11 +605,11 @@
             // 
             this.lblCurrentTrack.AutoSize = true;
             this.lblCurrentTrack.BackColor = System.Drawing.Color.Transparent;
-            this.lblCurrentTrack.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentTrack.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentTrack.ForeColor = System.Drawing.Color.Silver;
-            this.lblCurrentTrack.Location = new System.Drawing.Point(365, 443);
+            this.lblCurrentTrack.Location = new System.Drawing.Point(378, 425);
             this.lblCurrentTrack.Name = "lblCurrentTrack";
-            this.lblCurrentTrack.Size = new System.Drawing.Size(395, 34);
+            this.lblCurrentTrack.Size = new System.Drawing.Size(220, 37);
             this.lblCurrentTrack.TabIndex = 22;
             this.lblCurrentTrack.Text = "... INITIALIZING ...";
             // 
@@ -666,11 +617,11 @@
             // 
             this.lblWeather.AutoSize = true;
             this.lblWeather.BackColor = System.Drawing.Color.Transparent;
-            this.lblWeather.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeather.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeather.ForeColor = System.Drawing.Color.Silver;
-            this.lblWeather.Location = new System.Drawing.Point(404, 327);
+            this.lblWeather.Location = new System.Drawing.Point(378, 309);
             this.lblWeather.Name = "lblWeather";
-            this.lblWeather.Size = new System.Drawing.Size(395, 34);
+            this.lblWeather.Size = new System.Drawing.Size(220, 37);
             this.lblWeather.TabIndex = 21;
             this.lblWeather.Text = "... INITIALIZING ...";
             // 
@@ -678,11 +629,11 @@
             // 
             this.lblDuplicateStreams.AutoSize = true;
             this.lblDuplicateStreams.BackColor = System.Drawing.Color.Transparent;
-            this.lblDuplicateStreams.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDuplicateStreams.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuplicateStreams.ForeColor = System.Drawing.Color.Silver;
-            this.lblDuplicateStreams.Location = new System.Drawing.Point(446, 244);
+            this.lblDuplicateStreams.Location = new System.Drawing.Point(378, 226);
             this.lblDuplicateStreams.Name = "lblDuplicateStreams";
-            this.lblDuplicateStreams.Size = new System.Drawing.Size(395, 34);
+            this.lblDuplicateStreams.Size = new System.Drawing.Size(220, 37);
             this.lblDuplicateStreams.TabIndex = 20;
             this.lblDuplicateStreams.Text = "... INITIALIZING ...";
             // 
@@ -690,11 +641,11 @@
             // 
             this.lblPeakStreams.AutoSize = true;
             this.lblPeakStreams.BackColor = System.Drawing.Color.Transparent;
-            this.lblPeakStreams.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeakStreams.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeakStreams.ForeColor = System.Drawing.Color.Silver;
-            this.lblPeakStreams.Location = new System.Drawing.Point(350, 205);
+            this.lblPeakStreams.Location = new System.Drawing.Point(378, 187);
             this.lblPeakStreams.Name = "lblPeakStreams";
-            this.lblPeakStreams.Size = new System.Drawing.Size(395, 34);
+            this.lblPeakStreams.Size = new System.Drawing.Size(220, 37);
             this.lblPeakStreams.TabIndex = 19;
             this.lblPeakStreams.Text = "... INITIALIZING ...";
             // 
@@ -702,11 +653,11 @@
             // 
             this.lblSystemStatus2.AutoSize = true;
             this.lblSystemStatus2.BackColor = System.Drawing.Color.Transparent;
-            this.lblSystemStatus2.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemStatus2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemStatus2.ForeColor = System.Drawing.Color.Silver;
-            this.lblSystemStatus2.Location = new System.Drawing.Point(365, 519);
+            this.lblSystemStatus2.Location = new System.Drawing.Point(378, 501);
             this.lblSystemStatus2.Name = "lblSystemStatus2";
-            this.lblSystemStatus2.Size = new System.Drawing.Size(395, 34);
+            this.lblSystemStatus2.Size = new System.Drawing.Size(220, 37);
             this.lblSystemStatus2.TabIndex = 24;
             this.lblSystemStatus2.Text = "... INITIALIZING ...";
             // 
@@ -714,11 +665,11 @@
             // 
             this.lblSystemStatus4.AutoSize = true;
             this.lblSystemStatus4.BackColor = System.Drawing.Color.Transparent;
-            this.lblSystemStatus4.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemStatus4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemStatus4.ForeColor = System.Drawing.Color.Silver;
-            this.lblSystemStatus4.Location = new System.Drawing.Point(365, 587);
+            this.lblSystemStatus4.Location = new System.Drawing.Point(378, 569);
             this.lblSystemStatus4.Name = "lblSystemStatus4";
-            this.lblSystemStatus4.Size = new System.Drawing.Size(395, 34);
+            this.lblSystemStatus4.Size = new System.Drawing.Size(220, 37);
             this.lblSystemStatus4.TabIndex = 26;
             this.lblSystemStatus4.Text = "... INITIALIZING ...";
             // 
@@ -726,11 +677,11 @@
             // 
             this.lblSystemStatus3.AutoSize = true;
             this.lblSystemStatus3.BackColor = System.Drawing.Color.Transparent;
-            this.lblSystemStatus3.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemStatus3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemStatus3.ForeColor = System.Drawing.Color.Silver;
-            this.lblSystemStatus3.Location = new System.Drawing.Point(365, 553);
+            this.lblSystemStatus3.Location = new System.Drawing.Point(378, 535);
             this.lblSystemStatus3.Name = "lblSystemStatus3";
-            this.lblSystemStatus3.Size = new System.Drawing.Size(395, 34);
+            this.lblSystemStatus3.Size = new System.Drawing.Size(220, 37);
             this.lblSystemStatus3.TabIndex = 25;
             this.lblSystemStatus3.Text = "... INITIALIZING ...";
             // 
@@ -738,13 +689,76 @@
             // 
             this.lblSystemStatus5.AutoSize = true;
             this.lblSystemStatus5.BackColor = System.Drawing.Color.Transparent;
-            this.lblSystemStatus5.Font = new System.Drawing.Font("OCRATTRegular", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemStatus5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSystemStatus5.ForeColor = System.Drawing.Color.Silver;
-            this.lblSystemStatus5.Location = new System.Drawing.Point(365, 621);
+            this.lblSystemStatus5.Location = new System.Drawing.Point(378, 603);
             this.lblSystemStatus5.Name = "lblSystemStatus5";
-            this.lblSystemStatus5.Size = new System.Drawing.Size(395, 34);
+            this.lblSystemStatus5.Size = new System.Drawing.Size(220, 37);
             this.lblSystemStatus5.TabIndex = 27;
             this.lblSystemStatus5.Text = "... INITIALIZING ...";
+            // 
+            // btnStream
+            // 
+            this.btnStream.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.btnStream.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(90)))), ((int)(((byte)(160)))));
+            this.btnStream.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStream.Image = global::Nadjia.Properties.Resources.network_off;
+            this.btnStream.Location = new System.Drawing.Point(12, 161);
+            this.btnStream.Name = "btnStream";
+            this.btnStream.Size = new System.Drawing.Size(56, 56);
+            this.btnStream.TabIndex = 28;
+            this.btnStream.UseVisualStyleBackColor = false;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.btnConfig.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(90)))), ((int)(((byte)(160)))));
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Image = global::Nadjia.Properties.Resources.settings_off;
+            this.btnConfig.Location = new System.Drawing.Point(12, 409);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(56, 56);
+            this.btnConfig.TabIndex = 29;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // btnSoundboard
+            // 
+            this.btnSoundboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.btnSoundboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(90)))), ((int)(((byte)(160)))));
+            this.btnSoundboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSoundboard.Image = global::Nadjia.Properties.Resources.soundboard_off;
+            this.btnSoundboard.Location = new System.Drawing.Point(12, 285);
+            this.btnSoundboard.Name = "btnSoundboard";
+            this.btnSoundboard.Size = new System.Drawing.Size(56, 56);
+            this.btnSoundboard.TabIndex = 30;
+            this.btnSoundboard.UseVisualStyleBackColor = false;
+            this.btnSoundboard.Click += new System.EventHandler(this.btnSoundboard_Click);
+            // 
+            // btnConsoleDesk
+            // 
+            this.btnConsoleDesk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.btnConsoleDesk.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(90)))), ((int)(((byte)(160)))));
+            this.btnConsoleDesk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsoleDesk.Image = global::Nadjia.Properties.Resources.track_player_off;
+            this.btnConsoleDesk.Location = new System.Drawing.Point(12, 223);
+            this.btnConsoleDesk.Name = "btnConsoleDesk";
+            this.btnConsoleDesk.Size = new System.Drawing.Size(56, 56);
+            this.btnConsoleDesk.TabIndex = 31;
+            this.btnConsoleDesk.UseVisualStyleBackColor = false;
+            this.btnConsoleDesk.Click += new System.EventHandler(this.btnConsoleDesk_Click);
+            // 
+            // btnTimer
+            // 
+            this.btnTimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.btnTimer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(90)))), ((int)(((byte)(160)))));
+            this.btnTimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimer.Image = global::Nadjia.Properties.Resources.timer_off;
+            this.btnTimer.Location = new System.Drawing.Point(12, 347);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Size = new System.Drawing.Size(56, 56);
+            this.btnTimer.TabIndex = 32;
+            this.btnTimer.UseVisualStyleBackColor = false;
             // 
             // frmDashboard
             // 
@@ -753,7 +767,12 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1197, 649);
+            this.ClientSize = new System.Drawing.Size(1197, 673);
+            this.Controls.Add(this.btnTimer);
+            this.Controls.Add(this.btnConsoleDesk);
+            this.Controls.Add(this.btnSoundboard);
+            this.Controls.Add(this.btnConfig);
+            this.Controls.Add(this.btnStream);
             this.Controls.Add(this.lblSystemStatus5);
             this.Controls.Add(this.lblSystemStatus4);
             this.Controls.Add(this.lblSystemStatus3);
@@ -772,11 +791,6 @@
             this.Controls.Add(this.lblPeakStreamsTitle);
             this.Controls.Add(this.lblActiveStreamsTitle);
             this.Controls.Add(this.lblAirTimeTitle);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblTagLine);
             this.Controls.Add(this.lblPoweredBy);
             this.Controls.Add(this.pictureBox1);
@@ -789,11 +803,6 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
             this.ResumeLayout(false);
@@ -807,11 +816,6 @@
         private System.Windows.Forms.PictureBox stationLogo;
         private System.Windows.Forms.Label lblPoweredBy;
         private System.Windows.Forms.Label lblTagLine;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.MenuStrip menuMain;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
@@ -867,6 +871,11 @@
         private System.Windows.Forms.Label lblSystemStatus3;
         private System.Windows.Forms.Label lblSystemStatus5;
         private System.Windows.Forms.ToolStripMenuItem trackLibraryToolStripMenuItem;
+        private System.Windows.Forms.Button btnStream;
+        private System.Windows.Forms.Button btnConfig;
+        private System.Windows.Forms.Button btnSoundboard;
+        private System.Windows.Forms.Button btnConsoleDesk;
+        private System.Windows.Forms.Button btnTimer;
     }
 }
 

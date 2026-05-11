@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
+
 
 namespace Nadjia
 {
@@ -58,8 +61,12 @@ namespace Nadjia
             var editId3Tag = new ToolStripMenuItem("Edit ID3 tag");
             editId3Tag.Click += editId3Tag_Click;
 
+            ToolStripMenuItem addToQueueMenuItem = new ToolStripMenuItem("Add to Queue");
+            addToQueueMenuItem.Click += addToQueueMenuItem_Click;
+
             _resultsMenu.Items.Add(saveNewPlaylist);
             _resultsMenu.Items.Add(saveExistingPlaylist);
+            _resultsMenu.Items.Add(addToQueueMenuItem);
             _resultsMenu.Items.Add(new ToolStripSeparator());
             _resultsMenu.Items.Add(editId3Tag);
 
@@ -98,9 +105,84 @@ namespace Nadjia
 
             return selectedTracks;
         }
+
+        private void addToQueueMenuItem_Click(object sender, EventArgs e)
+        {
+            List<TrackInfo> selectedTracks = GetSelectedTracksFromSearchResults();
+
+            if (selectedTracks.Count == 0)
+            {
+                MessageBox.Show("Select one or more tracks first.");
+                return;
+            }
+
+            frmConsoleDesk console = Application.OpenForms
+                .OfType<frmConsoleDesk>()
+                .FirstOrDefault();
+
+            if (console == null)
+            {
+                console = new frmConsoleDesk();
+                console.Show();
+            }
+            else
+            {
+                console.BringToFront();
+                console.Focus();
+            }
+
+            console.AddTracksToQueue(selectedTracks);
+        }
+
         private void saveExistingPlaylist_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Save to existing playlist is coming next.");
+            List<TrackInfo> selectedTracks = GetSelectedTracksFromSearchResults();
+
+            if (selectedTracks.Count == 0)
+            {
+                MessageBox.Show("Select one or more tracks first.");
+                return;
+            }
+
+            using (OpenFileDialog dialog = new OpenFileDialog())
+            {
+                dialog.Title = "Select Existing Playlist";
+                dialog.Filter = "Playlist XML Files (*.xml)|*.xml";
+                dialog.InitialDirectory = nadjiaConfig.trackLibraryFolder;
+                dialog.Multiselect = false;
+
+                if (dialog.ShowDialog() != DialogResult.OK)
+                    return;
+
+                string playlistPath = dialog.FileName;
+                string playlistName = Path.GetFileNameWithoutExtension(playlistPath);
+
+                List<TrackInfo> existingTracks = PlaylistXmlService.LoadPlaylist(playlistPath);
+                existingTracks.AddRange(selectedTracks);
+
+                PlaylistXmlService.SavePlaylist(
+                    playlistPath,
+                    playlistName,
+                    existingTracks
+                );
+
+                MessageBox.Show("Tracks added to existing playlist.");
+            }
+        }
+
+        private List<TrackInfo> GetSelectedTracksFromSearchResults()
+        {
+            List<TrackInfo> tracks = new List<TrackInfo>();
+
+            foreach (DataGridViewRow row in dgvResults.SelectedRows)
+            {
+                TrackInfo track = row.DataBoundItem as TrackInfo;
+
+                if (track != null)
+                    tracks.Add(track);
+            }
+
+            return tracks;
         }
         private void saveNewPlaylist_Click(object sender, EventArgs e)
         {

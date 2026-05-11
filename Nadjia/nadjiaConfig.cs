@@ -10,6 +10,8 @@ namespace Nadjia
     {
         public static string trackLibraryFolder;
         public static string LRQuestionsFolder;
+        public static string playlistFolder;
+        public static string queueFolder;
         public static string soundboardLibraryFolder;
         public static string masterDatabase;
         public static string sweeperFolder;

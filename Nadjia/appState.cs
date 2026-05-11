@@ -9,5 +9,8 @@ namespace Nadjia
     public static class AppState
     {
         public static List<TrackInfo> MusicLibrary { get; set; } = new List<TrackInfo>();
+        public static string sysTime;
+        public static string sysWeather;
+        public static string sysConnections;
     }
 }
